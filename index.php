@@ -78,8 +78,8 @@ $ctr = 3;
         <div id="login-panel">
             <img src="img/robot.png">
             <form action="<?php $_SERVER['PHP_SELF']; ?>" method="get">
-                <input type="email" class="input" name="email" id="email" placeholder="Email Adress"><br><br>
-                <input type="password" class="input" name="password" id="password" placeholder="Password"><br>
+                <input type="email" class="input" name="email" id="email" placeholder="Email Adress" title="Please fill out the field"><br><br>
+                <input type="password" class="input" name="password" id="password" placeholder="Password" title="Please fill out the field"><br>
                 <input type="submit" class="button" name="submit" value="Sign In">
                 <input type="reset" class="button" value="Clear">
             </form>
