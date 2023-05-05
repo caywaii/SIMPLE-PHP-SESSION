@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        #registration-panel{
+            width: 45%;
+            padding: 1%;
+            border-radius: 20px;
+            background-color: white;
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            margin-top: 13%;
+        }
+
+        img{
+            width: 20%;
+            display: block;
+            float:right;
+            margin-bottom: 30px;
+            margin-top: 25px;
+            margin-left:auto;
+            margin-right:auto;
+
+            
+        }
+
+        .input {
+            width: 100%;
+            height: 50px;
+            margin: 3px 0;
+            border-radius: 10px;
+            padding: 2%;
+            box-sizing: border-box;
+            margin-right: 15px;
+
+        }
+        #fields{
+            width: 75%;
+        }
+        h1{
+            margin-bottom: 20px;
+        }
+        hr {
+        border: none;
+        height: 2px;
+        background: black;
+ 
+    }
+    
+    .button {
+            width: 150px;
+            height: 50px;
+            background-color: #16A085;
+            border-radius: 15px;
+            border: solid;
+            border-color: #16A085;
+            color: white;
+            margin-bottom: 10px;
+            margin-top: 5px;
+            font-size: 17px;
+        }
+
+        a{
+            padding-left: 4%;
+            padding-right: 4%;
+            padding-top: 1%;
+            padding-bottom: 1.45%;
+            text-decoration: none;
+        }
+
+        #message-show{
+            background-color: #CFE8E7;
+            border-radius: 10%;
+            visibility:hidden;
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <body style="background-color:#CFE8E7;">
+        <div id="registration-panel">
+            <img src="img/robot.png">
+            <div id="fields">
+                <h1 align="left">User Registration</h1>
+                <h4 id="message-show">text</h4>
+                <form>
+                    <script>
+                        $messageShow = document.getElementById("message-show");
+
+                        function myFunction(message){
+                            $messageShow.innerHTML = message;
+                            $messageShow.style.visibility = 'visible';
+                        }
+                    </script>
+                    <input type="text" class="input" name="name" id="name" required placeholder="Full Name" onclick="myFunction('Enter complete name.')" onmouseout="$messageShow.style.visibility = 'hidden'"><br>
+                    <input type="email" class="input" name="email" id="email" required placeholder="Email Adress" onclick="myFunction('Enter valid email address')" onmouseout="$messageShow.style.visibility = 'hidden'"><br>
+                    <input type="password" class="input" name="password" id="password" required placeholder="Password" onclick="myFunction('Enter password')" onmouseout="$messageShow.style.visibility = 'hidden'"><br>
+                 
+                
+            </div>
+                <hr>
+                <div align="left">
+                    <input type="submit" class="button" name="submit" value="Sign Up">
+                    <input type="reset" class="button" value="Clear">
+                    <a href="index.php" class="button">Login</a>
+                </div>
+                </form>
+        </div>
+    </body>
+</body>
+</html>
